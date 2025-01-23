@@ -39,7 +39,7 @@ export const Signup = ()=>{
                             password
                         });
                         localStorage.setItem("token",response.data.token)
-                        navigate("/dashoboatd")
+                        navigate("/dashboard")
                     }}
                     label = {"Sign Up"}
                     />

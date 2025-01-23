@@ -4,6 +4,8 @@ import { Users } from "../components/Users"
 export const Dashboard = ()=>{
     const userToken = JSON.parse(localStorage.getItem('user'));
     return <div>
-        Dashboard Page Hehe
+        <Appbar/>
+        <Balance/>
+        <Users/>
     </div>
 }

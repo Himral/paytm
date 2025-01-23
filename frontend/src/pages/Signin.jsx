@@ -41,7 +41,7 @@ export const Signin = ()=>{
         <div className = "flex flex-col justify-center">
             <div className="rounded-lg bg-white w-80 text-center p-2 h-max px-4">
         <Heading label = {"Sign In"}/>
-        <SubHeading msg = {"Enter your credentials to acess your account"}/>
+        <SubHeading msg = {"Enter your credentials to login"}/>
         <InputBox label = {"Email"} placeholder = {"Enter your email"} onChange={(e) => {
             setEmail(e.target.value);
         }}/>

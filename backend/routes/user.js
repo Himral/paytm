@@ -87,6 +87,7 @@ router.post("/signin",async(req,res) =>{
         }, JWT_SECRET);
   
         res.status(200).json({
+            msg : "Successfully logged in",
             token: token
         })
         return;
@@ -113,7 +114,6 @@ router.put("/",authMiddleware,async(req,res)=>{
     const {success} = updateBody.safeParse(req.body);
 
     if(!success){
-
         res.status(411).json({message : "Wrong Inputs"})
     }
 
@@ -132,10 +132,8 @@ router.get("/bulk", async(req,res) => {
     const users = await User.find({
         $or : [
             {
-            firstName : {
-                "$regex" : filter
-            }
-        },
+                firstName : { "$regex" : filter}
+            },
             {
                 lastName : {
                     "$regex" : filter

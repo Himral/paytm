@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/PayTM')
+mongoose.connect('mongodb+srv://himralgarg:Fmmeu0BQNNorfVgB@cluster0.asqrmpf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
 const {Schema , model} = mongoose;
 
